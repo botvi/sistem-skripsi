@@ -67,16 +67,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <div class="col-md-6">
-                                <label for="penguji_id" class="form-label">Dosen Penguji</label>
-                                <select class="form-select" id="penguji_id" name="penguji_id" required>
-                                    @foreach($dosens as $dosen)
-                                    <option value="{{ $dosen->user_id }}" {{ $pendaftaransemprojurnal->penguji_id == $dosen->id ? 'selected' : '' }}>
-                                        {{ $dosen->nama }}
-                                    </option>
-                                    @endforeach
-                                </select>
-                            </div>
+                           
 
                             <!-- File upload fields -->
                             <div class="col-md-6">

@@ -118,8 +118,8 @@
                     Entrance Year
                 </h5>
                 <h5 style="font-style: italic;">
-                    {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_masuk)->format('d') }},
-                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_masuk)->format('F') }},
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_masuk)->format('d') }}
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_masuk)->format('F') }}
                     {{ $pendaftaranskpi->tahun_masuk }}
                 </h5>
 
@@ -130,8 +130,8 @@
                     Graduation Year
                 </h5>
                 <h5 style="font-style: italic;">
-                    {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_kelulusan)->format('d') }},
-                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_kelulusan)->format('F') }}, 
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_kelulusan)->format('d') }}
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_kelulusan)->format('F') }}
                     {{ $pendaftaranskpi->tahun_kelulusan }}
                 </h5>
 
@@ -154,7 +154,7 @@
                 <h5>
                     Sarjana Kesehatan Masyarakat
                 </h5>
-                <h5>
+                <h5 style="font-style: italic;">
                     Bachelor Public Health
                 </h5>
             </div>
@@ -716,13 +716,16 @@
                 </h5>
 
 
-                <h5 style="margin-top: 50px;">
-                    SEMARANG
-                    ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    2025
+                <h5 style="margin-top: 130px;">
+                    SEMARANG,
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_kelulusan)->format('d') }}
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_kelulusan)->format('F') }}
+                    {{ $pendaftaranskpi->tahun_kelulusan }}
                 </h5>
-                <h5>
-                    Semarang, ............
+                <h5 style="font-style: italic;">
+                    Semarang,  {{ \Carbon\Carbon::parse($pendaftaranskpi->tanggal_kelulusan)->format('d') }}
+                    {{ \Carbon\Carbon::parse($pendaftaranskpi->bulan_kelulusan)->format('F') }}
+                    {{ $pendaftaranskpi->tahun_kelulusan }}
                 </h5>
 
 

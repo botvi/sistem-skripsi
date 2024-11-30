@@ -12,7 +12,6 @@ class PendaftaranSempro extends Model
         'mahasiswa_id',
         'pembimbing_id',
         'advisor_id',
-        'penguji_id',
         'judul_proposal',
         'dokumen_kartu_bimbingan',
         'dokumen_kehadiran_seminar_proposal',

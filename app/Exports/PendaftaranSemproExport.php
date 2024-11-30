@@ -27,7 +27,6 @@ class PendaftaranSemproExport implements FromCollection, WithHeadings, WithStyle
             'No',
             'Mahasiswa',
             'Pembimbing',
-            'Penguji',
             'Advisor',
             'Judul Proposal',
             'Tempat',
@@ -68,7 +67,6 @@ class PendaftaranSemproExport implements FromCollection, WithHeadings, WithStyle
             $this->rowNumber,
             $item->mahasiswa->nama ?? '',
             $item->dosenpembimbing->nama ?? '',
-            $item->dosenpenguji->nama ?? '',
             $item->dosenadvisor->nama ?? '',
             $item->judul_proposal,
             $item->tempat,
@@ -91,20 +89,19 @@ class PendaftaranSemproExport implements FromCollection, WithHeadings, WithStyle
             'A' => 5,   // No
             'B' => 20,  // Mahasiswa
             'C' => 20,  // Pembimbing
-            'D' => 20,  // Penguji
-            'E' => 20,  // Advisor
-            'F' => 40,  // Judul Proposal
-            'G' => 20,  // Tempat
-            'H' => 15,  // Tanggal
-            'I' => 10,  // Waktu
-            'J' => 10,  // Selesai
-            'K' => 30,  // Link Spreadsheet
-            'L' => 30,  // Kartu Bimbingan
-            'M' => 30,  // Kehadiran Seminar
-            'N' => 30,  // Turnitin
-            'O' => 30,  // Pendaftaran Seminar
-            'P' => 30,  // Draf Proposal
-            'Q' => 10,  // Nilai
+            'D' => 20,  // Advisor
+            'E' => 20,  // Judul Proposal
+            'F' => 40,  // Tempat
+            'G' => 20,  // Tanggal
+            'H' => 10,  // Waktu
+            'I' => 10,  // Selesai
+            'J' => 30,  // Link Spreadsheet
+            'K' => 30,  // Kartu Bimbingan
+            'L' => 30,  // Kehadiran Seminar
+            'M' => 30,  // Turnitin
+            'N' => 30,  // Pendaftaran Seminar
+            'O' => 30,  // Draf Proposal
+            'P' => 10,  // Nilai
         ];
     }
 }

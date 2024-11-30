@@ -18,8 +18,7 @@ class DosenPageSemproController extends Controller
         $dataSempro = PendaftaranSempro::with(['dosenpembimbing', 'dosenpenguji', 'dosenadvisor', 'mahasiswa'])
             ->where(function ($query) use ($userId) {
                 $query->where('pembimbing_id', $userId)
-                      ->orWhere('advisor_id', $userId)
-                      ->orWhere('penguji_id', $userId);
+                      ->orWhere('advisor_id', $userId);
             })
             ->get();
 

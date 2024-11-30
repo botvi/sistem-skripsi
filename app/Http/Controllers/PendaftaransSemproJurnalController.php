@@ -68,7 +68,6 @@ class PendaftaransSemproJurnalController extends Controller
             'nilai' => 'nullable',
             'pembimbing_id' => 'required|exists:master_dosens,user_id',
             'advisor_id' => 'required|exists:master_dosens,user_id',
-            'penguji_id' => 'required|exists:master_dosens,user_id',
         ]);
 
         // Array of documents and their respective directories
@@ -95,7 +94,6 @@ class PendaftaransSemproJurnalController extends Controller
         $pendaftaranSemproJurnal->mahasiswa_id = auth()->user()->id;
         $pendaftaranSemproJurnal->pembimbing_id = $request->pembimbing_id;
         $pendaftaranSemproJurnal->advisor_id = $request->advisor_id;
-        $pendaftaranSemproJurnal->penguji_id = $request->penguji_id;
         $pendaftaranSemproJurnal->judul_proposal = $request->judul_proposal;
         $pendaftaranSemproJurnal->dokumen_kartu_bimbingan = $uploadedFiles['dokumen_kartu_bimbingan'];
         $pendaftaranSemproJurnal->dokumen_kehadiran_seminar_proposal = $uploadedFiles['dokumen_kehadiran_seminar_proposal'];
@@ -157,7 +155,6 @@ class PendaftaransSemproJurnalController extends Controller
             'nilai' => 'nullable',
             'pembimbing_id' => 'required|exists:master_dosens,user_id',
             'advisor_id' => 'required|exists:master_dosens,user_id',
-            'penguji_id' => 'required|exists:master_dosens,user_id',
         ]);
 
         $pendaftaranSemproJurnal = PendaftaransSemproJurnal::findOrFail($id);
@@ -195,7 +192,6 @@ class PendaftaransSemproJurnalController extends Controller
             'judul_proposal' => $request->judul_proposal,
             'pembimbing_id' => $request->pembimbing_id,
             'advisor_id' => $request->advisor_id,
-            'penguji_id' => $request->penguji_id,
             'tempat' => $request->tempat,
             'tanggal' => $request->tanggal,
             'waktu' => $request->waktu,

@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('mahasiswa_id');
             $table->foreignId('pembimbing_id');
             $table->foreignId('advisor_id');
-            $table->foreignId('penguji_id');
             $table->string('judul_proposal');
             $table->string('dokumen_kartu_bimbingan')->nullable();
             $table->string('dokumen_kehadiran_seminar_proposal')->nullable();

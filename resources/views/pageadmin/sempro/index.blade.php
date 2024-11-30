@@ -30,7 +30,6 @@
                                     <th>NIM Mahasiswa</th>
                                     <th>Judul Proposal</th>
                                     <th>Dosen Pembimbing</th>
-                                    <th>Dosen Penguji</th>
                                     <th>Dosen Advisor</th>
                                     <th>Tempat</th>
                                     <th>Waktu Mulai</th>
@@ -49,7 +48,6 @@
                                         <td>{{ $p->mahasiswa->nim }}</td>
                                         <td>{{ $p->judul_proposal }}</td>
                                         <td>{{ $p->dosenpembimbing->nama }}</td>
-                                        <td>{{ $p->dosenpenguji->nama }}</td>
                                         <td>{{ $p->dosenadvisor->nama }}</td>
                                         <td>{{ $p->tempat }}</td>
                                         <td>{{ $p->waktu }}</td>
@@ -82,7 +80,6 @@
                                     <th>NIM Mahasiswa</th>
                                     <th>Judul Proposal</th>
                                     <th>Dosen Pembimbing</th>
-                                    <th>Dosen Penguji</th>
                                     <th>Dosen Advisor</th>
                                     <th>Tempat</th>
                                     <th>Waktu Mulai</th>

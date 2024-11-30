@@ -67,12 +67,7 @@
                                     <input type="text" class="form-control" value="{{ $pendaftaransemprojurnal->dosenadvisor->nama }}"
                                         readonly>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="penguji_id" class="form-label">Dosen Penguji</label>
-                                    <input type="text" class="form-control" value="{{ $pendaftaransemprojurnal->dosenpenguji->nama }}"
-                                        readonly>
-                                </div>
-
+                               
                                 <!-- Document Links -->
                                 <div class="col-12">
                                     <h6 class="text-primary">Dokumen Pendukung</h6>

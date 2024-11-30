@@ -439,6 +439,42 @@
 	</script>
 	
 	<!--app JS-->
+	<!---->
+	<script>
+    let timeout;
+
+    // Fungsi untuk mengatur ulang timer
+    function resetTimer() {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            // Kirim permintaan logout ke server jika tidak ada aktivitas selama 2 menit
+            fetch("{{ route('logout') }}", {
+                method: "POST",
+                headers: {
+                    "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                },
+            }).then(() => {
+                window.location.href = '/'; // Redirect ke halaman utama
+            });
+        }, 2 * 60 * 1000); // 2 menit (dalam milidetik)
+    }
+
+    // Logout ketika pengguna menutup browser atau tab
+    window.addEventListener('beforeunload', (event) => {
+        navigator.sendBeacon("{{ route('logout') }}", JSON.stringify({
+            _token: "{{ csrf_token() }}",
+        }));
+    });
+
+    // Monitor semua aktivitas pengguna untuk mengatur ulang timer
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onclick = resetTimer;
+    document.onscroll = resetTimer;
+</script>
+
+	<!---->
 
 
 

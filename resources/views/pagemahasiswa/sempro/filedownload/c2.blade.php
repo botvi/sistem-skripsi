@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C2. FILE PERBAIKAN PENGUJI DAN PEMBIMBING</title>
+    <title>C2. FILE PERBAIKAN ADVISOR DAN PEMBIMBING</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{
@@ -302,8 +302,8 @@
 
     <div class="signature">
         <p>Semarang,</p>
-        <p style="margin-bottom: 100px;">Penguji</p>
-        <p>{{ $pendaftaransempro->dosenpenguji->nama }}</p>
+        <p style="margin-bottom: 100px;">Advisor</p>
+        <p>{{ $pendaftaransempro->dosenadvisor->nama }}</p>
     </div>
     <script>
         window.onload = function () {

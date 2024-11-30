@@ -28,7 +28,6 @@
                                     <th>No</th>
                                     <th>Judul Proposal</th>
                                     <th>Dosen Pembimbing</th>
-                                    <th>Dosen Penguji</th>
                                     <th>Dosen Advisor</th>
                                     <th>Tempat</th>
                                     <th>Waktu Mulai</th>
@@ -43,7 +42,6 @@
                                         <td>{{ $index + 1 }}</td>
                                         <td>{{ $p->judul_proposal }}</td>
                                         <td>{{ $p->dosenpembimbing->nama }}</td>
-                                        <td>{{ $p->dosenpenguji->nama }}</td>
                                         <td>{{ $p->dosenadvisor->nama }}</td>
                                         <td>{{ $p->tempat }}</td>
                                         <td>{{ $p->waktu }}</td>
@@ -84,7 +82,7 @@
                                                 <a href="{{ route('download.c1', $p->id) }}" target="_blank">C1. LAYOUT
                                                     SEMINAR PROPOSAL</a><br>
                                                 <a href="{{ route('download.c2', $p->id) }}" target="_blank">C2. FILE
-                                                    PERBAIKAN PENGUJI DAN PEMBIMBING</a><br>
+                                                    PERBAIKAN ADVISOR DAN PEMBIMBING</a><br>
                                                     <a href="{{ asset('filedownload/C3_TATIB_SEMPRO.pdf') }}" target="_blank">C3. TATIB DOWNLOAD</a>
 
                                             @endif
@@ -123,7 +121,6 @@
                                     <th>No</th>
                                     <th>Judul Proposal</th>
                                     <th>Dosen Pembimbing</th>
-                                    <th>Dosen Penguji</th>
                                     <th>Dosen Advisor</th>
                                     <th>Tempat</th>
                                     <th>Waktu Mulai</th>
