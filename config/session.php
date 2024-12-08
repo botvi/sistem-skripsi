@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'lifetime' => env('SESSION_LIFETIME', 2), // Waktu sesi dalam menit
+    'lifetime' => env('SESSION_LIFETIME', 5), // Waktu sesi dalam menit
 
     'expire_on_close' => false,
 

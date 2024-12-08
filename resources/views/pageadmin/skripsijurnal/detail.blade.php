@@ -63,14 +63,26 @@
                                         readonly>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="advisor_id" class="form-label">Dosen Ketua Penguji</label>
-                                    <input type="text" class="form-control" value="{{ $pendaftaranskripsijurnal->dosenketuapenguji->nama }}"
-                                        readonly>
+                                    <label for="ketua_penguji_id" class="form-label">Dosen Ketua Penguji</label>
+                                    <select class="form-select" id="ketua_penguji_id" name="ketua_penguji_id" required>
+                                        @foreach ($dosens as $dosen)
+                                            <option value="{{ $dosen->user_id }}"
+                                                {{ $pendaftaranskripsijurnal->ketua_penguji_id == $dosen->user_id ? 'selected' : '' }}>
+                                                {{ $dosen->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="penguji_id" class="form-label">Dosen Penguji</label>
-                                    <input type="text" class="form-control" value="{{ $pendaftaranskripsijurnal->dosenpenguji->nama }}"
-                                        readonly>
+                                    <select class="form-select" id="penguji_id" name="penguji_id" required>
+                                        @foreach ($dosens as $dosen)
+                                            <option value="{{ $dosen->user_id }}"
+                                                {{ $pendaftaranskripsijurnal->penguji_id == $dosen->user_id ? 'selected' : '' }}>
+                                                {{ $dosen->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
                                 <!-- Document Links -->

@@ -50,7 +50,7 @@
                                                 <span class="badge bg-danger">Ditolak</span>
                                                 <!-- modal komentar -->
                                                 <button type="button" class="btn-sm btn btn-danger" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal">Lihat komentar</button>
+                                                    data-bs-target="#modalKomentar-{{ $p->id }}">Lihat komentar</button>
                                                 <!-- modal komentar -->
                                             @elseif($p->status == 'diterima')
                                                 <span class="badge bg-success">Diterima</span>

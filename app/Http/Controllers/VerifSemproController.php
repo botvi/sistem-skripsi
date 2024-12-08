@@ -36,8 +36,8 @@ class VerifSemproController extends Controller
         $pendaftaransempro = PendaftaranSempro::with(['dosenpembimbing', 'dosenpenguji', 'dosenadvisor'])
             ->findOrFail($id);
         $link = MasterLink::all();
-
-        return view('pageadmin.sempro.detail', compact('pendaftaransempro', 'link'));
+        $dosens = MasterDosen::all();
+        return view('pageadmin.sempro.detail', compact('pendaftaransempro', 'link', 'dosens'));
     }
 
     public function update(Request $request, $id)
@@ -51,7 +51,7 @@ class VerifSemproController extends Controller
             'link_spredsheet' => 'nullable',
             'komentar' => 'nullable',
             'nilai' => 'nullable',
-
+            'advisor_id' => 'nullable',
         ]);
 
         $pendaftaranSempro = PendaftaranSempro::findOrFail($id);
@@ -68,6 +68,7 @@ class VerifSemproController extends Controller
             'link_spredsheet' => $request->link_spredsheet,
             'komentar' => $request->komentar,
             'nilai' => $request->nilai,
+            'advisor_id' => $request->advisor_id,
         ]);
 
         // Success alert

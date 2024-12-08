@@ -33,8 +33,8 @@ class VerifSkripsiController extends Controller
         $pendaftaranskripsi = PendaftaranSkripsi::with(['dosenpembimbing', 'dosenpenguji', 'dosenketuapenguji'])
         ->findOrFail($id);
         $link = MasterLink::all();
-
-        return view('pageadmin.skripsi.detail', compact('pendaftaranskripsi','link'));
+        $dosens = MasterDosen::all();
+        return view('pageadmin.skripsi.detail', compact('pendaftaranskripsi','link', 'dosens'));
     }
 
     public function update(Request $request, $id)
@@ -48,6 +48,8 @@ class VerifSkripsiController extends Controller
             'link_spredsheet' => 'nullable',
             'komentar' => 'nullable',
             'nilai' => 'nullable',
+            'penguji_id' => 'nullable',
+            'ketua_penguji_id' => 'nullable',
         ]);
 
         $pendaftaranSkripsi = PendaftaranSkripsi::findOrFail($id);
@@ -64,6 +66,8 @@ class VerifSkripsiController extends Controller
             'link_spredsheet' => $request->link_spredsheet,
             'komentar' => $request->komentar,
             'nilai' => $request->nilai,
+            'penguji_id' => $request->penguji_id,
+            'ketua_penguji_id' => $request->ketua_penguji_id,
         ]);
 
         // Success alert

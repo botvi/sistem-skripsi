@@ -33,8 +33,9 @@ class VerifSkripsiJurnalController extends Controller
         $pendaftaranskripsijurnal = PendaftaransSkripsiJurnal::with(['dosenpembimbing', 'dosenpenguji', 'dosenketuapenguji'])
         ->findOrFail($id);
         $link = MasterLink::all();
+        $dosens = MasterDosen::all();
 
-        return view('pageadmin.skripsijurnal.detail', compact('pendaftaranskripsijurnal','link'));
+        return view('pageadmin.skripsijurnal.detail', compact('pendaftaranskripsijurnal','link', 'dosens'));
     }
 
     public function update(Request $request, $id)
@@ -48,6 +49,8 @@ class VerifSkripsiJurnalController extends Controller
             'link_spredsheet' => 'nullable',
             'komentar' => 'nullable',
             'nilai' => 'nullable',
+            'penguji_id' => 'nullable',
+            'ketua_penguji_id' => 'nullable',
         ]);
         $pendaftaranSkripsiJurnal = PendaftaransSkripsiJurnal::findOrFail($id);
 
@@ -63,6 +66,8 @@ class VerifSkripsiJurnalController extends Controller
             'link_spredsheet' => $request->link_spredsheet,
             'komentar' => $request->komentar,
             'nilai' => $request->nilai,
+            'penguji_id' => $request->penguji_id,
+            'ketua_penguji_id' => $request->ketua_penguji_id,
         ]);
 
         // Success alert

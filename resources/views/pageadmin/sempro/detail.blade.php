@@ -64,8 +64,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="advisor_id" class="form-label">Dosen Advisor</label>
-                                    <input type="text" class="form-control" value="{{ $pendaftaransempro->dosenadvisor->nama }}"
-                                        readonly>
+                                    <select class="form-select" id="advisor_id" name="advisor_id" required>
+                                        @foreach($dosens as $dosen)
+                                        <option value="{{ $dosen->user_id }}" {{ $pendaftaransempro->advisor_id == $dosen->user_id ? 'selected' : '' }}>
+                                            {{ $dosen->nama }}
+                                        </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                               
                                 <!-- Document Links -->

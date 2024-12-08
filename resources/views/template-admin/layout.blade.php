@@ -456,7 +456,7 @@
             }).then(() => {
                 window.location.href = '/'; // Redirect ke halaman utama
             });
-        }, 2 * 60 * 1000); // 2 menit (dalam milidetik)
+        }, 5 * 60 * 1000); // 2 menit (dalam milidetik)
     }
 
     // Logout ketika pengguna menutup browser atau tab
